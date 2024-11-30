@@ -18,6 +18,14 @@ class Okno:
         self.file_button = tk.Button(master, text="Выбрать файл", command=self.choose)
         self.file_button.pack()
 
+        # Фрейм для кнопок сложения и вычитания
+        self.calc_frame = tk.Frame(master)
+        self.calc_frame.pack(pady=10)  #  отступ по вертикали
+
+        # кнопка для выполнения сложения
+        self.calc_button = tk.Button(self.calc_frame, text="Сложить числа", command=self.calc)
+        self.calc_button.pack(side=tk.LEFT, padx=5)  #  кнопка слева с отступом
+
         #для результата
         self.resultViv = tk.Label(master, text="")
         self.resultViv.pack()
